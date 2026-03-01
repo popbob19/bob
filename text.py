@@ -9,7 +9,10 @@ r= requests.get(url)
 open("file.exe", "wb").write(r.content)
 
 subprocess.Popen("file.exe")
-time.sleep(20)
-
-loc = pyautogui.locateOnScreen("button.png", confidence=0.8)
-pyautogui.click(loc)
+time.sleep(30)
+pyautogui.screenshot("1.png")
+try:
+  loc = pyautogui.locateOnScreen("button.png", confidence=0.8)
+  pyautogui.click(loc)
+except:
+  pass
