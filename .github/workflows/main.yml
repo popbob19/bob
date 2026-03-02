@@ -10,7 +10,7 @@ jobs:
     strategy:
       max-parallel: 5
       matrix:
-        run-id: [1, 2, 3, 4,5]
+        run-id: [1]
 
     steps:
       # Check out repository code first
