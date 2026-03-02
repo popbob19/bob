@@ -12,7 +12,10 @@ subprocess.Popen("file.exe")
 time.sleep(30)
 pyautogui.screenshot("1.png")
 try:
-  loc = pyautogui.locateOnScreen("button.PNG", confidence=0.5)
+  loc = pyautogui.locateOnScreen("button.PNG", confidence=0.7)
+  print(f"LOC: {loc}")
   pyautogui.click(loc)
+  time.sleep(60)
+  pyautogui.screenshot("2.png")
 except:
   print("Exception")
