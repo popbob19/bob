@@ -14,7 +14,7 @@ pyautogui.screenshot("1.png")
 #for x in range(501, 701, 5):
 screen_width, screen_height = pyautogui.size()
 x = 510
-for y in range(0, screen_height, 5):  # Every single pixel from top to bottom
+for y in range(419, 719, 5):  # Top (219) to Bottom (419), positive step
     print(f"Clicking {x},{y}")
     pyautogui.click(x, y)
     time.sleep(3)
