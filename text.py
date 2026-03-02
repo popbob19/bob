@@ -1,4 +1,4 @@
-import sys, subprocess,re
+import sys, subprocess,re,os
 packages = ['requests']#,'pywinauto', 'pywin32', 'comtypes', 'pyautogui', 'Pillow', 'opencv-python','pydirectinput']
 subprocess.check_call([sys.executable, '-m', 'pip', 'install'] + packages)
 
