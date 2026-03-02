@@ -12,8 +12,9 @@ subprocess.Popen("file.exe")
 time.sleep(30)
 pyautogui.screenshot("1.png")
 #for x in range(501, 701, 5):
-x=530
-for y in range(419, 219, -5):  # Fixed: negative step
+screen_width, screen_height = pyautogui.size()
+x = 530
+for y in range(0, screen_height, 5):  # Every single pixel from top to bottom
     print(f"Clicking {x},{y}")
     pyautogui.click(x, y)
     time.sleep(3)
