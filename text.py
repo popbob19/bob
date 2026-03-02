@@ -5,6 +5,7 @@ subprocess.check_call([sys.executable, '-m', 'pip', 'install'] + packages)
 import requests,time #,pyautogui
 
 url="https://releases.morelogin.com/prod/client/win/x64/2.50.1/MoreLogin_window_x64_2.50.1.0.exe"
+r = requests.get(url)
 desktop = os.path.join(os.path.expanduser("~"), "Desktop")
 file_path = os.path.join(desktop, "file.exe")
 
