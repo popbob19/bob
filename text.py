@@ -11,11 +11,9 @@ open("file.exe", "wb").write(r.content)
 subprocess.Popen("file.exe")
 time.sleep(30)
 pyautogui.screenshot("1.png")
-try:
-  loc = pyautogui.locateOnScreen("button.PNG", confidence=0.7)
-  print(f"LOC: {loc}")
-  pyautogui.click(loc)
-  time.sleep(60)
-  pyautogui.screenshot("2.png")
-except:
-  print("Exception")
+x,y=501, 419
+for x in range(501, 701, 5):
+    for y in range(419, 119, 5):
+        pyautogui.click(x, y)
+        time.sleep(20)
+        pyautogui.screenshot(f"{x}_{y}.png")
