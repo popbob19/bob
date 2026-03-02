@@ -13,8 +13,8 @@ time.sleep(30)
 pyautogui.screenshot("1.png")
 #for x in range(501, 701, 5):
 x=530
-for y in range(419, 219, -10):  # Fixed: negative step
+for y in range(419, 219, -5):  # Fixed: negative step
     print(f"Clicking {x},{y}")
     pyautogui.click(x, y)
-    time.sleep(20)
+    time.sleep(3)
     pyautogui.screenshot(f"{x}_{y}.png")
