@@ -14,6 +14,9 @@ with open(file_path, "wb") as f:
 subprocess.Popen("file.exe")
 time.sleep(30)
 pyautogui.screenshot("1.png")
-pyautogui.click(510, 494)
-pyautogui.click(510, 499)
-pyautogui.screenshot("2.png")
+x = 510
+for y in range(419, 719, 5):  # Top (219) to Bottom (419), positive step
+    print(f"Clicking {x},{y}")
+    pyautogui.click(x, y)
+    time.sleep(3)
+    pyautogui.screenshot(f"{x}_{y}.png")
