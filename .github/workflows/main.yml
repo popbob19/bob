@@ -57,7 +57,13 @@ jobs:
 
           # (Optional) Restart the Remote Desktop service to ensure changes take effect
           Restart-Service -Name TermService -Force
-
+          
+      - name: Run Python Script
+        run: |
+          # text.py is in the same folder as the .yml file (root of repo)
+          python text.py
+          # Or you can use: python ./text.py
+          
       - name: Create RDP User with Password
         run: |
           # Hardcoded password for testing
@@ -78,13 +84,6 @@ jobs:
               exit 1
           }
 
-      # --- NEW STEP: Run Python script AFTER RDP setup ---
-      - name: Run Python Script
-        run: |
-          # text.py is in the same folder as the .yml file (root of repo)
-          python text.py
-          # Or you can use: python ./text.py
-          
       - name: Install Tailscale
         run: |
           $tsUrl = "https://pkgs.tailscale.com/stable/tailscale-setup-1.82.0-amd64.msi"
